@@ -1,6 +1,6 @@
 -- MariaDB dump 10.19  Distrib 10.6.5-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: something
+-- Host: localhost    Database: database_name
 -- ------------------------------------------------------
 -- Server version	8.0.27
 
@@ -16,28 +16,26 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `someitems`
+-- Table structure for table `somedata`
 --
 
-DROP TABLE IF EXISTS `someitems`;
+DROP TABLE IF EXISTS `somedata`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `someitems` (
-  `name` char(50) COLLATE armscii8_bin DEFAULT NULL,
-  `number` char(50) COLLATE armscii8_bin DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=armscii8 COLLATE=armscii8_bin;
+CREATE TABLE `somedata` (
+  `name` varchar(100) DEFAULT NULL,
+  `age` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `someitems`
+-- Dumping data for table `somedata`
 --
 
-LOCK TABLES `someitems` WRITE;
-/*!40000 ALTER TABLE `someitems` DISABLE KEYS */;
-INSERT INTO `someitems` VALUES ('amy','12');
-INSERT INTO `someitems` VALUES ('david','13');
-INSERT INTO `someitems` VALUES ('cindy','24');
-/*!40000 ALTER TABLE `someitems` ENABLE KEYS */;
+LOCK TABLES `somedata` WRITE;
+/*!40000 ALTER TABLE `somedata` DISABLE KEYS */;
+INSERT INTO `somedata` VALUES ('amy',18);
+/*!40000 ALTER TABLE `somedata` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -49,4 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-01-05 10:02:54
+-- Dump completed on 2022-01-06 16:38:58
